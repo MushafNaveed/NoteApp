@@ -1,0 +1,325 @@
+:root {
+  --WhiteColor: #f8eded;
+  --BlueColor: #173b45;
+  --OrangeColor: #ff8225;
+  --RedColor: #b43f3f;
+  --YellowColor: #ffde4d;
+  --PinkColor: #ff7ee2;
+  --GreenColor: #9cdba6;
+  --BrownColor: #fd9b63;
+  --LilitaFonts: "Lilita One", sans-serif;
+  --PTFonts: "PT Serif", serif;
+  --BungeeFonts: "Bungee Tint", sans-serif;
+  --FiraFonts: "Fira Sans", sans-serif;
+  --BebasFonts: "Bebas Neue", sans-serif;
+}
+
+/* SideBar */
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--WhiteColor);
+}
+
+.container-fluid {
+  max-width: 100%;
+}
+.SideBar {
+  background-color: var(--WhiteColor);
+  border-right: 0.5px solid rgb(216, 210, 210);
+  width: 150px;
+  height: 100vh;
+}
+
+h5 {
+  padding: 20px;
+  font-size: 1.5rem; /* Responsive font size */
+
+  font-family: var(--BungeeFonts);
+}
+
+.btn {
+  margin-left: 50px;
+  font-size: 20px;
+  background-color: var(--BlueColor);
+  color: var(--WhiteColor);
+  border: none;
+  outline: none;
+  transition: .5s all;
+}
+
+.btn:hover {
+  transform: scale(1.2);
+  background-color: black;
+}
+
+
+.Colors {
+  margin-right: 15px;
+}
+
+.YellowBtn {
+  background-color: var(--YellowColor);
+  color: var(--YellowColor);
+  border: none;
+  outline: none;
+  transform: scale(0.7);
+  transition: 0.5s all;
+}
+
+.YellowBtn:hover {
+ transform: scale(1);
+}
+.PinkBtn {
+  background-color: var(--PinkColor);
+  color: var(--PinkColor);
+  transform: scale(0.7);
+  transition: 0.5s all;
+  border: none;
+  outline: none;
+}
+
+.GreenBtn {
+  background-color: var(--GreenColor);
+  color: var(--GreenColor);
+  transform: scale(0.7);
+  transition: 0.5s all;
+  border: none;
+  outline: none;
+}
+
+.BrownBtn {
+  background-color: var(--BrownColor);
+  color: var(--BrownColor);
+  transform: scale(0.7);
+  transition: 0.5s all;
+  border: none;
+  outline: none;
+}
+
+.YellowBtn:hover , .PinkBtn:hover , .GreenBtn:hover , .BrownBtn:hover {
+  transform: scale(1);
+ }
+
+.active {
+  border: 2px solid var(--BlueColor);
+}
+
+
+.input-group input {
+  background-color: transparent;
+  border: 1px solid var(--RedColor);
+  outline: none;
+}
+
+.input-group input:focus {
+  outline: none;
+  border: 1px solid var(--RedColor);
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.input-group span {
+  background-color: transparent;
+  border: 1px solid var(--RedColor);
+  outline: none;
+}
+
+/* Notes */
+
+.Notes {
+  width: 250px;
+  height: 250px;
+  background-color: var(--YellowColor);
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.Notes input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 10px;
+  font-family: var(--BebasFonts);
+  /* font-weight: bold; */
+  font-size: 15px;
+  color: black;
+}
+
+.Notes input::placeholder {
+  color: black;
+}
+
+.Notes textarea {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 10px;
+  font-size: 10px;
+  font-family: var(--PTFonts);
+  resize: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--RedColor) var(--WhiteColor) ;
+}
+
+.Notes textarea::placeholder {
+  color: black;
+}
+
+.notes-container {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+}
+
+.note-item {
+  margin: 10px; 
+  box-sizing: border-box; 
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.bin {
+  font-size: 10px;
+  border: none;
+  background-color: transparent;
+  color: var(--RedColor);
+}
+
+.DateDiv {
+  padding: 10px;
+  font-family: var(--FiraFonts);
+  font-size: 10px;
+}
+
+.Foot{
+  background-color: #f8eded;
+  margin-left: 162px;
+  width: 90%;
+  padding: 10px;
+  font-size: 12px;
+  border-top: 1px solid rgb(216, 210, 210);
+  /* box-shadow: 2px 2px 5px black; */
+  font-family: var(--FiraFonts);
+}
+
+
+/* 
+.Side{
+  position: fixed;
+} */
+
+
+.NotesContainer{
+  /* background-color: var(--BlueColor); */
+  width: 100%;
+  height: 75vh;
+  scrollbar-width: thin;
+  scrollbar-color: var(--WhiteColor) var(--RedColor) ;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.Weather-Location p{
+  font-size: 15px;
+  margin: 0px 0px 15px 10px; 
+  font-family: var(--BebasFonts);
+  
+}
+
+.Weather-Location i{
+  font-size: 35px;
+  color: var(--RedColor);
+}
+
+.Weather-Location span{
+  font-size: 10px;
+  /* margin: 0 0 -50px 5px; */
+  position: relative;
+  top: -25px;
+  left: 10px;
+  font-family: var(--PTFonts);
+}
+
+.BtnAlert{
+  position: absolute;
+  width: 300px;
+  height: 120px;
+  background-color: var(--RedColor);
+  color: var(--WhiteColor);
+  font-family:var(--FiraFonts) ;
+  top: 300px;
+  left: 650px;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.BtnAlert .Alert{
+  position: relative;
+  border: none;
+  outline: none;
+  background-color: var(--BlueColor);
+  color: var(--WhiteColor);
+  border-radius: 5px;
+  font-family: var(--BebasFonts);
+  left: 170px;
+  font-size: 20px;
+  top: 20px;
+  transition: .7s all;
+}
+
+.BtnAlert .Alert:hover, .btn:hover{
+  box-shadow: 0 0 5px var(--BlueColor),
+    0 0 25px var(--BlueColor),
+    0 0 50px var(--BlueColor),
+    0 0 0px var(--BlueColor) ;
+}
+
+.Loader {
+  width: 100%;
+  height: 100vh;
+}
+
+.Loader img {
+  width: 300px;
+  height: 300px;
+  animation: PenchilRotateMove 3s ease-in-out forwards; /* Adjust duration and timing function */
+}
+
+@keyframes PenchilRotateMove {
+  /* Rotating the pencil twice */
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(720deg); /* 2 full rotations (360° * 2) */
+  }
+
+  /* Moving straight */
+  75% {
+    transform: rotate(720deg) /* Ensure it keeps the final rotation and moves */
+  }
+
+  100%{
+    rotate: 45deg;
+  }
+}
+
+
